@@ -5,8 +5,8 @@ phases:
       - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel STS 
   build:
     commands:
-      - dotnet restore dotnet-lamda-api/VerySimpleAPI.sln
-      - dotnet build dotnet-lamda-api/VerySimpleAPI.sln
+      - dotnet restore ./VerySimpleAPI.sln
+      - dotnet build ./VerySimpleAPI.sln
   post_build:
     commands:
       - dotnet test --no-build --verbosity normal
