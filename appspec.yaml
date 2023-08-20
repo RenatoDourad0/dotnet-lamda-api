@@ -1,0 +1,11 @@
+version: 0.0
+Resources:
+  - MyFunction:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: verysimpleapi
+        CurrentVersion: 1
+        TargetVersion: 2
+        Role: arn:aws:iam::352500618688:role/service-role/githubactiosn-ci-cd-serverless-test-app-lambda-role-c722ypst
+        Runtime: dotnetcore6
+        Handler: VerySimpleAPI
