@@ -7,10 +7,7 @@ phases:
     commands:
       - dotnet restore dotnet-lamda-api/VerySimpleAPI.sln
       - dotnet build dotnet-lamda-api/VerySimpleAPI.sln
-  test:
+  post_build:
     commands:
       - dotnet test --no-build --verbosity normal
-      
-  publish:
-    commands:
       - dotnet publish -c Release -o ./publish
