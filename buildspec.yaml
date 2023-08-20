@@ -3,7 +3,6 @@ phases:
   install:
     commands:
       - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel STS
-      - sudo yum install zip
   build:
     commands:
       - dotnet restore ./VerySimpleAPI.sln
