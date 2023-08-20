@@ -13,4 +13,4 @@ phases:
       - zip -r ./publish.zip  ./publish
 artifacts:
   files:
-    - './publish/publish.zip'
+    - './publish.zip'
