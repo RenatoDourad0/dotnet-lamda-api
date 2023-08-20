@@ -10,6 +10,6 @@ phases:
   post_build:
     commands:
       - dotnet publish -c Release -o ./publish
-  artifacts:
-    files:
-      - './publish'
+artifacts:
+  files:
+    - './publish'
