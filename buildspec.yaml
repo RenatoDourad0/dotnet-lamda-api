@@ -3,6 +3,7 @@ phases:
   install:
     commands:
       - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel STS
+      - sudo yum install zip
   build:
     commands:
       - dotnet restore ./VerySimpleAPI.sln
@@ -10,6 +11,7 @@ phases:
   post_build:
     commands:
       - dotnet publish -c Release -o ./publish
+      - zip -r ./publish.zip  ./publish
 artifacts:
   files:
-    - './publish'
+    - './publish/publish.zip'
