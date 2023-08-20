@@ -1,8 +1,8 @@
 version: 0.2    
 phases:
   install:
-    runtime-versions:
-        dotnet: 6
+    commands:
+      - Running command curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel STS
   build:
     commands:
       - dotnet restore ./VerySimpleAPI.sln
